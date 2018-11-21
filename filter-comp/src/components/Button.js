@@ -2,12 +2,14 @@ import React, {Component} from 'react';
 
 class Button extends Component {
     render() {
-        const {buttonName, className} = this.props;
+        const {buttonName, className, path} = this.props;
         return (
             <div>
-                <button className={className}>
-                    {buttonName}
-                </button>
+                <a href={path}>
+                    <button className={className}>
+                        {buttonName}
+                    </button>
+                </a>
             </div>
         );
     }
